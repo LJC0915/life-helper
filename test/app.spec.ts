@@ -1,13 +1,24 @@
 import request from "supertest";
 import app from "@/app";
 
-describe("GET /random-url", () => {
-    it("should return Hello World!", (done) => {
-        request(app).get("/")
-            .expect("Hello World!", done);
-    });
-    it("should return 404", (done) => {
-        request(app).get("/reset")
-            .expect(404, done);
-    });
+describe("app spec", () => {
+  it("should return Hello World!", (done) => {
+    request(app)
+      .get("/")
+      .then((res) => {
+        expect(res.status).toBe(200);
+        expect(res.text).toBe("Hello World!");
+      });
+
+    done();
+  });
+  it("should return 404", (done) => {
+    request(app)
+      .get("/reset")
+      .then((response) => {
+        expect(response.status).toBe(404);
+      });
+
+    done();
+  });
 });
