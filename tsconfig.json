@@ -15,7 +15,8 @@
     "paths": {
       "@/*": ["src/*"],
       "@@/*": ["test/*"]
-    }
+    },
+    "outDir": "dist"
   },
   "include": [
     "src/**/*"

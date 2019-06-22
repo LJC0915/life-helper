@@ -6,6 +6,8 @@
   "author": "LJC0915 <bxh.red@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build-ts": "tsc",
+    "postinstall": "npm run build-ts",
     "dev": "nodemon src/app.ts",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "lint:fix": "tslint -c tslint.json -p tsconfig.json --fix",
