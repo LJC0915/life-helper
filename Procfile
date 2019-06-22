@@ -1,1 +1,1 @@
-web: nodemon src/app.ts
+web: npm dev
