@@ -22,5 +22,11 @@ module.exports = {
         "^@/(.*)$": "<rootDir>/src/$1",
         "^@@/(.*)$": "<rootDir>/test/$1",
     },
+    coveragePathIgnorePatterns: [
+        "/node_modules/",
+        "src/server.ts",
+    ],
+    collectCoverage: true,
+    coverageReporters: ["json", "lcov", "text-summary", "text"],
 };
 
